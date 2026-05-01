@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Magdy — Flutter Architect & Mobile Engineer</title>
+    <meta name="description"
+        content="Portfolio of Kamal Magdy, a Flutter Developer specializing in high-performance cross-platform mobile and desktop applications.">
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Ambient Effects -->
+    <div id="cursor-orb" aria-hidden="true"></div>
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+    <!-- Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav id="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">KM<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#crucible" class="nav-link" data-section="crucible">The Challenge</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Vault</a></li>
+                <li><a href="#websites" class="nav-link" data-section="websites">Web</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Stack</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Connect</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hire Me</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 01 — THE IDENTITY                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="chapter-label reveal-up">Chapter 01 — The Identity</p>
+                    <h1 class="hero-title reveal-up">
+                        <span class="line">Kamal</span>
+                        <span class="line accent">Magdy</span>
+                    </h1>
+                    <p class="hero-tagline reveal-up">Flutter Architect & Mobile Engineer</p>
+                    <p class="hero-description reveal-up">Crafting high-performance, cross-platform experiences that
+                        blend technical precision with human-centered design. 3+ years turning complex ideas into
+                        pixel-perfect reality.</p>
+                    <div class="hero-actions reveal-up">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore The Vault</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-up">
+                    <div class="portrait-frame" id="portrait-frame">
+                        <div class="portrait-glow"></div>
+                        <img src="profile.png" alt="Kamal Magdy — Flutter Developer" class="portrait-img"
+                            loading="eager">
+                        <div class="portrait-badge">
+                            <span class="badge-dot"></span>
+                            Available for work
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator reveal-up">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 02 — THE WORKSHOP                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="about" class="section about-section">
+            <p class="chapter-label reveal-up">Chapter 02 — The Workshop</p>
+            <h2 class="section-heading reveal-up">About & Credentials</h2>
+            <div class="about-grid">
+                <div class="about-card about-main glass-card reveal-up">
+                    <div class="card-icon">💡</div>
+                    <h3>Philosophy</h3>
+                    <p>A passionate Flutter developer specializing in mobile application development, eager to
+                        contribute innovative solutions to dynamic teams. Experienced in leading development projects,
+                        optimizing workflows, and delivering user-focused designs that scale.</p>
+                </div>
+                <div class="about-card glass-card reveal-up">
+                    <div class="card-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p><strong>B.Sc. Computer Science</strong></p>
+                    <p>Elshrouk Academy (2019–2022)</p>
+                    <div class="card-badge">Grade: Excellent</div>
+                </div>
+                <div class="about-card glass-card cert-card reveal-up" onclick="zoomImage('agile_cert.png')">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Agile Certification</h3>
+                    <img src="agile_cert.png" alt="Agile Course Certification" class="small-cert">
+                    <p>Orange Digital Center — Grade: 90%</p>
+                </div>
+                <div class="about-card glass-card cert-card reveal-up" onclick="zoomImage('hackathon_cert.png')">
+                    <div class="card-icon">🏆</div>
+                    <h3>Hackathon Winner</h3>
+                    <img src="hackathon_cert.png" alt="Flutter Hackathon #1 Rank 4" class="small-cert">
+                    <p>Ranked 4th out of hundreds of competitors.</p>
+                </div>
+                <div class="about-card about-languages glass-card reveal-up">
+                    <div class="card-icon">🌍</div>
+                    <h3>Languages</h3>
+                    <div class="lang-bars">
+                        <div class="lang-item">
+                            <span>Arabic</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="lang-level">Native</span>
+                        </div>
+                        <div class="lang-item">
+                            <span>English</span>
+                            <div class="lang-bar">
+                                <div class="lang-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="lang-level">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 03 — THE CRUCIBLE (HACKATHON)    -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="crucible" class="section crucible-section">
+            <p class="chapter-label reveal-up">Chapter 03 — The Crucible</p>
+            <h2 class="section-heading reveal-up">Defining Moments</h2>
+            <div class="story-card glass-card reveal-up">
+                <div class="story-content">
+                    <div class="story-header">
+                        <span class="story-badge">ODC FLUTTER HACKATHON #1</span>
+                        <h3>Overcoming the Impossible</h3>
+                    </div>
+                    <div class="story-body">
+                        <p class="story-intro">In 2022, while balancing my final university exams, I saw a post on
+                            LinkedIn: <strong>The ODC Flutter Hackathon.</strong></p>
+                        <p>I entered a room full of experienced developers. The pressure was immense. How could I
+                            compete with so many pros? I remember telling myself: <em>"Nothing is impossible. Believe in
+                                Allah and do your best."</em></p>
+                        <div class="story-phases">
+                            <div class="phase">
+                                <div class="phase-number">01</div>
+                                <div class="phase-text">
+                                    <strong>The Course:</strong> Built a full Learning Management System in 4 days.
+                                    Figma design, complex APIs, and <strong>Clean Architecture</strong>. I was proud to
+                                    stay among the final 30 participants.
+                                </div>
+                            </div>
+                            <div class="phase">
+                                <div class="phase-number">02</div>
+                                <div class="phase-text">
+                                    <strong>The Game:</strong> The final challenge was insane: <em>"Build a game in 4
+                                        hours."</em> Under heavy pressure, I planned, designed, and coded a
+                                    <strong>Flutter Color Game</strong>. It was one of the best in the room.
+                                </div>
+                            </div>
+                        </div>
+                        <p class="story-conclusion">Seven days later, I got the call: <strong>Top 5 in the
+                                Hackathon.</strong> This led to a 6-month journey working with ODC, proving that passion
+                            and hard work can conquer any obstacle.</p>
+                    </div>
+                </div>
+                <div class="story-visual">
+                    <div class="floating-cert-frame">
+                        <img src="hackathon_cert.png" alt="ODC Hackathon Certificate" class="hackathon-visual-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 04 — THE CHRONOLOGY (JOURNEY)   -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="experience" class="section exp-section">
+            <p class="chapter-label reveal-up">Chapter 04 — The Chronology</p>
+            <h2 class="section-heading reveal-up">Journey</h2>
+            <div class="timeline">
+                <div class="timeline-line" aria-hidden="true">
+                    <div class="timeline-line-fill"></div>
+                </div>
+
+                <div class="timeline-entry reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Present</span>
+                            <span class="timeline-type">Remote — London</span>
+                        </div>
+                        <h3>MEDIANET LTD</h3>
+                        <p class="timeline-role">Mobile Application Developer (Flutter)</p>
+                        <p>Designing and developing scalable mobile applications for an international user base.
+                            Implementing Clean Architecture and BLoC for high-end maintainability.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2023</span>
+                            <span class="timeline-type">Full-time</span>
+                        </div>
+                        <h3>MMTech</h3>
+                        <p class="timeline-role">Mobile Application Developer (Flutter)</p>
+                        <p>Specialized in deep-tier ERP systems. Streamlined massive business operations through custom
+                            Flutter mobile solutions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Jun — Dec 2022</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3>Orange Digital Center</h3>
+                        <p class="timeline-role">Flutter Developer Intern</p>
+                        <p>Following the Hackathon success, I joined ODC for 6 months. Developed "ODC Game" and
+                            integrated REST APIs in a fast-paced Agile environment.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Feb — May 2022</span>
+                            <span class="timeline-type">Full-time</span>
+                        </div>
+                        <h3>R STAR</h3>
+                        <p class="timeline-role">Mobile Developer (Flutter)</p>
+                        <p>Co-developed live mobile products, focusing on UI fidelity and initial professional Flutter
+                            implementations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 05 — THE VAULT (MOBILE)          -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="projects" class="section vault-section">
+            <p class="chapter-label reveal-up">Chapter 05 — The Vault</p>
+            <h2 class="section-heading reveal-up">Mobile Showcase</h2>
+            <div class="vault-grid">
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="hdcutz_app.png" alt="HD Cutz" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">01</div>
+                        <h3>HD Cutz</h3>
+                        <p>Real-world salon reservation system. Architected for real-time booking and high-speed data
+                            sync.</p>
+                        <div class="vault-tags"><span>GetX</span><span>Firebase Realtime</span><span>Clean Arch</span>
+                        </div>
+                        <div class="vault-meta">
+                            <span class="vault-award">✓ Interactive Booking</span>
+                            <span class="vault-award">✓ Push Notifications</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="trialist_app.png" alt="Trialist" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">02</div>
+                        <h3>Trialist</h3>
+                        <p>Academic research platform. Built with BLoC for complex state management and Firebase
+                            cross-platform sync.</p>
+                        <div class="vault-tags"><span>BLoC</span><span>Firebase
+                                Functions</span><span>Cross-Platform</span></div>
+                        <div class="vault-meta">
+                            <span class="vault-award">✓ Secure Verification</span>
+                            <span class="vault-award">✓ Cloud Functions</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="deivers_app.png" alt="Deivers" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">03</div>
+                        <h3>Deivers</h3>
+                        <p>A performance-first mobile app featuring smooth navigation and deep backend integration.</p>
+                        <div class="vault-tags"><span>Flutter</span><span>Performance</span><span>Backend Sync</span>
+                        </div>
+                        <div class="vault-meta">
+                            <span class="vault-award">📱 Optimized Build</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="poochiepoo_app.png" alt="Poochiepoo" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">04</div>
+                        <h3>Poochiepoo (Dawgly)</h3>
+                        <p>Premium social platform for pet owners. Industry-standard Clean Architecture with local-first
+                            storage.</p>
+                        <div class="vault-tags"><span>BLoC</span><span>Hive (Local
+                                DB)</span><span>Injectable</span><span>Maps SDK</span></div>
+                        <div class="vault-meta">
+                            <span class="vault-award">✓ Google Maps API</span>
+                            <span class="vault-award">✓ Retrofit API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="jaime_app.png" alt="Jaime AI Coach" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">05</div>
+                        <h3>Jaime</h3>
+                        <p>AI-powered sports coaching app with real-time camera analysis, voice guidance, and
+                            personalized training sessions.</p>
+                        <div class="vault-tags"><span>Clean Architecture</span><span>Feature-First</span><span>AI
+                                Integration</span></div>
+                        <div class="vault-meta">
+                            <span class="vault-award">🟢 On Going</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="odc_game_app.png" alt="ODC Game" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">06</div>
+                        <h3>ODC Game</h3>
+                        <p>Tic-Tac-Toe & Color Puzzle games built in 4 hours during the ODC Hackathon. Performance under
+                            pressure.</p>
+                        <div class="vault-tags"><span>Flutter</span><span>Provider</span><span>Game Logic</span></div>
+                        <div class="vault-meta">
+                            <span class="vault-award">🏆 ODC Hackathon Ranked 4th</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="sales4mazed_app.png" alt="Sales4Mazed" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">07</div>
+                        <h3>Sales4Mazed</h3>
+                        <p>Bilingual auction & bidding marketplace with real-time bidding, product filtering, and
+                            onboarding flows.</p>
+                        <div class="vault-tags"><span>Flutter</span><span>Bidding System</span><span>Bilingual
+                                (AR/EN)</span></div>
+                        <div class="vault-meta">
+                            <a href="https://github.com/engkemo1" target="_blank" class="vault-link">Source →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display">
+                        <img src="jacobia_app.png" alt="Jacobia" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
+                    <div class="vault-card-inner">
+                        <div class="vault-number">08</div>
+                        <h3>Jacobia</h3>
+                        <p>Competitive quiz platform with digital wallets, prize leaderboards, and blueCoins currency
+                            system.</p>
+                        <div class="vault-tags"><span>Flutter</span><span>Wallet System</span><span>Arabic RTL</span>
+                        </div>
+                        <div class="vault-meta">
+                            <span class="vault-award">🏆 Competitions</span>
+                            <span class="vault-award">💰 Digital Wallet</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 06 — WEB PROJECTS                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="websites" class="section websites-section">
+            <p class="chapter-label reveal-up">Chapter 06 — The Web Sites</p>
+            <h2 class="section-heading reveal-up">Web Applications</h2>
+
+            <div class="website-showcase reveal-up glass-card">
+                <div class="website-content">
+                    <h3>Harissa Awlad Fathallah</h3>
+                    <p class="website-desc">A luxury e-commerce web application built using Flutter Web. It features a
+                        modern dark-themed glassmorphism UI, scroll-driven product displays, and a highly responsive
+                        layout optimized for all screen sizes.</p>
+                    <div class="vault-tags">
+                        <span>Flutter Web</span><span>High-Performance UI</span><span>Responsive</span>
+                    </div>
+                    <div class="vault-meta" style="margin-top: 2rem;">
+                        <a href="https://harissa-awlad-fathallah.web.app/" class="btn btn-primary" target="_blank"
+                            rel="noopener">Visit Live Site</a>
+                    </div>
+                </div>
+                <div class="website-visual">
+                    <div class="browser-mockup">
+                        <div class="browser-top">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="browser-content">
+                            <img src="harissa.png" alt="Harissa Web App" class="harissa-screenshot" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Web Projects -->
+            <div class="vault-grid" style="margin-top: 3rem;">
+                <article class="vault-card glass-card reveal-up">
+                    <div class="vault-card-inner">
+                        <h3>Trialist Web App</h3>
+                        <p>Academic research portal. Built with Flutter Web, featuring high-fidelity data visualizations
+                            and real-time community interaction.</p>
+                        <div class="vault-tags"><span>Flutter Web</span><span>Firebase Web</span><span>Responsive</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vault-card glass-card reveal-up">
+                    <div class="vault-card-inner">
+                        <h3>Dawgly Web App</h3>
+                        <p>Enterprise administration dashboard for social platform management. Uses Retrofit and Hive
+                            for scalable data handling.</p>
+                        <div class="vault-tags"><span>Flutter Web</span><span>Admin Dashboard</span><span>REST
+                                API</span></div>
+                    </div>
+                </article>
+
+                <article class="vault-card glass-card reveal-up">
+                    <div class="vault-card-inner">
+                        <h3>Petology</h3>
+                        <p>A beautifully designed pet adoption platform. Highlights modern UI/UX principles and smooth
+                            web transitions.</p>
+                        <div class="vault-tags"><span>Web UI/UX</span><span>Modern Design</span></div>
+                        <div class="vault-meta">
+                            <a href="https://github.com/engkemo1/Petology_website" target="_blank"
+                                class="vault-link">View Repository →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 07 — THE SPECTRUM                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="skills" class="section skills-section">
+            <p class="chapter-label reveal-up">Chapter 07 — The Spectrum</p>
+            <h2 class="section-heading reveal-up">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-group glass-card reveal-up">
+                    <h3>Languages & Core</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">Dart</div>
+                        <div class="skill-pill featured">Flutter</div>
+                        <div class="skill-pill">Node.js</div>
+                        <div class="skill-pill">MongoDB</div>
+                    </div>
+                </div>
+                <div class="skill-group glass-card reveal-up">
+                    <h3>State Management</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">BLoC</div>
+                        <div class="skill-pill">Provider</div>
+                        <div class="skill-pill">Riverpod</div>
+                    </div>
+                </div>
+                <div class="skill-group glass-card reveal-up">
+                    <h3>Engineering</h3>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">Clean Architecture</div>
+                        <div class="skill-pill">SOLID</div>
+                        <div class="skill-pill">TDD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 08 — THE CONNECTION              -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="contact" class="section contact-section">
+            <p class="chapter-label reveal-up">Chapter 08 — The Connection</p>
+            <h2 class="contact-heading reveal-up">Ready to build<br><span class="accent">with excellence.</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info-card glass-card reveal-up">
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:kemoeng50@gmail.com" class="contact-value">kemoeng50@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">WhatsApp</span>
+                            <a href="https://wa.me/201206430818" class="contact-value">+20 120 643 0818</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-card glass-card reveal-up">
+                    <h3>Find me online</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/engkemo1" target="_blank" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kamal-magdy-22593b213/" target="_blank"
+                            class="social-btn">LinkedIn</a>
+                        <a href="https://www.facebook.com/kamal.magdy.790" target="_blank"
+                            class="social-btn">Facebook</a>
+                        <a href="https://www.instagram.com/eng.kamal_magdy/" target="_blank"
+                            class="social-btn">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <footer class="footer">
+        <p>Managed with Excellence — Kamal Magdy — <span id="year"></span></p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
