@@ -4,3 +4,4 @@ firebase-debug.log
 *.log
 Thumbs.db
 .DS_Store
+downloads/

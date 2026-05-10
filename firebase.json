@@ -1,11 +1,14 @@
 {
   "hosting": {
-    "site": "kamal-magdy-portfolio",
     "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "downloads/**",
+      ".git/**",
+      ".firebase/**",
+      "firebase-debug.log"
     ],
     "rewrites": [
       {
