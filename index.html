@@ -6,19 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamal Magdy — Flutter Architect & Mobile Engineer</title>
     <meta name="description"
-        content="Portfolio of Kamal Magdy, a Flutter Developer specializing in high-performance cross-platform mobile and desktop applications.">
-    <meta name="view-transition" content="same-origin">
+        content="Kamal Magdy — Flutter architect building production apps, admin dashboards and backends: NileSky, Izgara, an offline clinic system and more. Dart, Flutter, BLoC, Riverpod, NestJS, Supabase.">
+    <meta name="theme-color" content="#080c14">
+    <link rel="canonical" href="https://kamal-portfolio-kemo1.web.app/">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kamal Magdy — Flutter Architect & Mobile Engineer">
+    <meta property="og:description"
+        content="Full platforms, not just screens: customer apps, admin dashboards and the backends behind them.">
+    <meta property="og:url" content="https://kamal-portfolio-kemo1.web.app/">
+    <meta property="og:image" content="https://kamal-portfolio-kemo1.web.app/img/profile.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080c14'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='28' text-anchor='middle' fill='%23f8f9fc'%3EKM%3C/text%3E%3Ccircle cx='52' cy='40' r='4' fill='%2300ffcc'/%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@500;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kamal Magdy",
+      "jobTitle": "Flutter Architect & Mobile Engineer",
+      "url": "https://kamal-portfolio-kemo1.web.app/",
+      "email": "mailto:kemoeng50@gmail.com",
+      "sameAs": [
+        "https://github.com/engkemo1",
+        "https://www.linkedin.com/in/kamal-magdy-22593b213/"
+      ],
+      "knowsAbout": ["Flutter", "Dart", "BLoC", "Riverpod", "Clean Architecture", "NestJS", "Supabase", "Firebase"]
+    }
+    </script>
 </head>
 
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Ambient Effects -->
     <div id="cursor-orb" aria-hidden="true"></div>
     <canvas id="matrix-canvas" aria-hidden="true"></canvas>
@@ -31,21 +62,26 @@
     <!-- Floating Navigation -->
     <nav id="nav" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">KM<span class="dot">.</span></a>
-            <ul class="nav-links">
+            <a href="#hero" class="nav-logo" aria-label="Kamal Magdy — home">KM<span class="dot">.</span></a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
                 <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-                <li><a href="#crucible" class="nav-link" data-section="crucible">The Challenge</a></li>
-                <li><a href="#projects" class="nav-link" data-section="projects">Vault</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Journey</a></li>
+                <li><a href="#platforms" class="nav-link" data-section="platforms">Platforms</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Mobile</a></li>
                 <li><a href="#websites" class="nav-link" data-section="websites">Web</a></li>
                 <li><a href="#skills" class="nav-link" data-section="skills">Stack</a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact">Connect</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Hire Me</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <!-- ═══════════════════════════════════════════ -->
         <!--  CHAPTER 01 — THE IDENTITY                -->
         <!-- ═══════════════════════════════════════════ -->
@@ -58,25 +94,44 @@
                         <span class="line accent">Magdy</span>
                     </h1>
                     <p class="hero-tagline reveal-up">Flutter Architect & Mobile Engineer</p>
-                    <p class="hero-description reveal-up">Crafting high-performance, cross-platform experiences that
-                        blend technical precision with human-centered design. 3+ years turning complex ideas into
-                        pixel-perfect reality.</p>
+                    <p class="hero-description reveal-up">I build complete products, not just screens: the customer
+                        app, the admin dashboard that runs the business, and the backend that keeps both honest.
+                        4+ years shipping Flutter to iOS, Android, Web and Desktop.</p>
                     <div class="hero-actions reveal-up">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>Explore The Vault</span>
+                        <a href="#platforms" class="btn btn-primary">
+                            <span>See the Platforms</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                                stroke-width="2" aria-hidden="true">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </a>
                         <a href="#contact" class="btn btn-ghost">Let's Connect</a>
                     </div>
+                    <div class="hero-stats reveal-up">
+                        <div class="stat">
+                            <div><span class="stat-number" data-count="4">0</span><span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-label">Years with Flutter</span>
+                        </div>
+                        <div class="stat">
+                            <div><span class="stat-number" data-count="3">0</span></div>
+                            <span class="stat-label">Full-stack platforms</span>
+                        </div>
+                        <div class="stat">
+                            <div><span class="stat-number" data-count="16">0</span></div>
+                            <span class="stat-label">Projects showcased</span>
+                        </div>
+                        <div class="stat">
+                            <div><span class="stat-number" data-count="4">0</span></div>
+                            <span class="stat-label">Target platforms</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-visual reveal-up">
                     <div class="portrait-frame" id="portrait-frame">
                         <div class="portrait-glow"></div>
-                        <img src="profile.png" alt="Kamal Magdy — Flutter Developer" class="portrait-img"
-                            loading="eager">
+                        <img src="img/profile.webp" alt="Kamal Magdy" class="portrait-img" width="781" height="979"
+                            loading="eager" fetchpriority="high">
                         <div class="portrait-badge">
                             <span class="badge-dot"></span>
                             Available for work
@@ -98,33 +153,37 @@
             <h2 class="section-heading reveal-up">About & Credentials</h2>
             <div class="about-grid">
                 <div class="about-card about-main glass-card reveal-up">
-                    <div class="card-icon">💡</div>
+                    <div class="card-icon" aria-hidden="true">💡</div>
                     <h3>Philosophy</h3>
-                    <p>A passionate Flutter developer specializing in mobile application development, eager to
-                        contribute innovative solutions to dynamic teams. Experienced in leading development projects,
-                        optimizing workflows, and delivering user-focused designs that scale.</p>
+                    <p>I design Flutter apps the way I'd want to maintain them in two years: feature-first modules,
+                        clear boundaries between UI, state and data, and a backend that is the single source of truth
+                        for anything that touches money, permissions or patient data. I care just as much about the
+                        last 10% — motion, accessibility, Arabic RTL — that makes an app feel finished.</p>
                 </div>
                 <div class="about-card glass-card reveal-up">
-                    <div class="card-icon">🎓</div>
+                    <div class="card-icon" aria-hidden="true">🎓</div>
                     <h3>Education</h3>
                     <p><strong>B.Sc. Computer Science</strong></p>
                     <p>Elshrouk Academy (2019–2022)</p>
                     <div class="card-badge">Grade: Excellent</div>
                 </div>
-                <div class="about-card glass-card cert-card reveal-up" onclick="zoomImage('agile_cert.png')">
-                    <div class="card-icon">⚔️</div>
+                <button type="button" class="about-card glass-card cert-card reveal-up"
+                    data-zoom="img/agile_cert.webp" aria-label="Enlarge Agile certificate">
+                    <div class="card-icon" aria-hidden="true">⚔️</div>
                     <h3>Agile Certification</h3>
-                    <img src="agile_cert.png" alt="Agile Course Certification" class="small-cert">
+                    <img src="img/agile_cert.webp" alt="Agile course certificate" class="small-cert" loading="lazy">
                     <p>Orange Digital Center — Grade: 90%</p>
-                </div>
-                <div class="about-card glass-card cert-card reveal-up" onclick="zoomImage('hackathon_cert.png')">
-                    <div class="card-icon">🏆</div>
+                </button>
+                <button type="button" class="about-card glass-card cert-card reveal-up"
+                    data-zoom="img/hackathon_cert.webp" aria-label="Enlarge hackathon certificate">
+                    <div class="card-icon" aria-hidden="true">🏆</div>
                     <h3>Hackathon Winner</h3>
-                    <img src="hackathon_cert.png" alt="Flutter Hackathon #1 Rank 4" class="small-cert">
-                    <p>Ranked 4th out of hundreds of competitors.</p>
-                </div>
+                    <img src="img/hackathon_cert.webp" alt="ODC Flutter Hackathon #1 certificate" class="small-cert"
+                        loading="lazy">
+                    <p>ODC Flutter Hackathon #1 — ranked 4th.</p>
+                </button>
                 <div class="about-card about-languages glass-card reveal-up">
-                    <div class="card-icon">🌍</div>
+                    <div class="card-icon" aria-hidden="true">🌍</div>
                     <h3>Languages</h3>
                     <div class="lang-bars">
                         <div class="lang-item">
@@ -168,28 +227,29 @@
                             <div class="phase">
                                 <div class="phase-number">01</div>
                                 <div class="phase-text">
-                                    <strong>The Course:</strong> Built a full Learning Management System in 4 days.
-                                    Figma design, complex APIs, and <strong>Clean Architecture</strong>. I was proud to
-                                    stay among the final 30 participants.
+                                    <strong>The Course</strong> Built a full Learning Management System in 4 days.
+                                    Figma design, complex APIs, and Clean Architecture — and stayed among the final 30
+                                    participants.
                                 </div>
                             </div>
                             <div class="phase">
                                 <div class="phase-number">02</div>
                                 <div class="phase-text">
-                                    <strong>The Game:</strong> The final challenge was insane: <em>"Build a game in 4
-                                        hours."</em> Under heavy pressure, I planned, designed, and coded a
-                                    <strong>Flutter Color Game</strong>. It was one of the best in the room.
+                                    <strong>The Game</strong> The final challenge: <em>"Build a game in 4 hours."</em>
+                                    Under heavy pressure, I planned, designed and coded a Flutter Color Game — one of
+                                    the best in the room.
                                 </div>
                             </div>
                         </div>
-                        <p class="story-conclusion">Seven days later, I got the call: <strong>Top 5 in the
-                                Hackathon.</strong> This led to a 6-month journey working with ODC, proving that passion
-                            and hard work can conquer any obstacle.</p>
+                        <p class="story-conclusion">Seven days later, I got the call: ranked 4th in the Hackathon. That
+                            led to a 6-month journey with ODC, proving that passion and hard work can conquer any
+                            obstacle.</p>
                     </div>
                 </div>
                 <div class="story-visual">
                     <div class="floating-cert-frame">
-                        <img src="hackathon_cert.png" alt="ODC Hackathon Certificate" class="hackathon-visual-img">
+                        <img src="img/hackathon_cert.webp" alt="ODC Hackathon certificate" class="hackathon-visual-img"
+                            loading="lazy">
                     </div>
                 </div>
             </div>
@@ -216,7 +276,7 @@
                         <h3>MEDIANET LTD</h3>
                         <p class="timeline-role">Mobile Application Developer (Flutter)</p>
                         <p>Designing and developing scalable mobile applications for an international user base.
-                            Implementing Clean Architecture and BLoC for high-end maintainability.</p>
+                            Implementing Clean Architecture and BLoC for long-term maintainability.</p>
                     </div>
                 </div>
 
@@ -229,7 +289,7 @@
                         </div>
                         <h3>MMTech</h3>
                         <p class="timeline-role">Mobile Application Developer (Flutter)</p>
-                        <p>Specialized in deep-tier ERP systems. Streamlined massive business operations through custom
+                        <p>Specialized in deep-tier ERP systems. Streamlined large business operations through custom
                             Flutter mobile solutions.</p>
                     </div>
                 </div>
@@ -243,8 +303,8 @@
                         </div>
                         <h3>Orange Digital Center</h3>
                         <p class="timeline-role">Flutter Developer Intern</p>
-                        <p>Following the Hackathon success, I joined ODC for 6 months. Developed "ODC Game" and
-                            integrated REST APIs in a fast-paced Agile environment.</p>
+                        <p>Following the Hackathon, I joined ODC for 6 months. Developed "ODC Game" and integrated REST
+                            APIs in a fast-paced Agile environment.</p>
                     </div>
                 </div>
 
@@ -257,7 +317,7 @@
                         </div>
                         <h3>R STAR</h3>
                         <p class="timeline-role">Mobile Developer (Flutter)</p>
-                        <p>Co-developed live mobile products, focusing on UI fidelity and initial professional Flutter
+                        <p>Co-developed live mobile products, focusing on UI fidelity and my first professional Flutter
                             implementations.</p>
                     </div>
                 </div>
@@ -265,23 +325,294 @@
         </section>
 
         <!-- ═══════════════════════════════════════════ -->
-        <!--  CHAPTER 05 — THE VAULT (MOBILE)          -->
+        <!--  CHAPTER 05 — FLAGSHIP PLATFORMS          -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section id="platforms" class="section platforms-section">
+            <p class="chapter-label reveal-up">Chapter 05 — The Platforms</p>
+            <h2 class="section-heading reveal-up">Full-Stack Platforms</h2>
+            <p class="section-lead reveal-up">End-to-end systems I architected and built myself: the app customers
+                use, the dashboard staff run the business from, and the backend in between.</p>
+
+            <!-- ── NILESKY ── -->
+            <article class="platform glass-card reveal-up" id="nilesky" style="--brand:#d9ad3c; --brand-dim:rgba(217,173,60,.14)">
+                <header class="platform-head">
+                    <div class="platform-id">
+                        <img src="img/nilesky_logo.webp" alt="" class="platform-logo" width="64" height="64"
+                            loading="lazy">
+                        <div>
+                            <span class="platform-kicker">Travel marketplace · Luxor, Egypt</span>
+                            <h3>NileSky</h3>
+                        </div>
+                    </div>
+                    <span class="platform-status live">Live</span>
+                </header>
+                <p class="platform-summary">A booking marketplace and real-time operations platform for Luxor's hot
+                    air balloon industry. Tourists compare operators and book a sunrise flight; operators run
+                    dispatch, fleet, crew and payouts from a dashboard.</p>
+
+                <figure class="platform-shot dark wide">
+                    <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                    <button type="button" class="shot-zoom" data-zoom="img/nilesky_admin.webp" aria-label="Enlarge NileSky dashboard screenshot">
+                        <img src="img/nilesky_admin.webp" alt="NileSky admin dashboard in Arabic: revenue, flights, active operators and latest bookings"
+                            loading="lazy" width="1908" height="1017">
+                    </button>
+                    <figcaption>Admin dashboard — Arabic RTL, live operations &amp; latest bookings</figcaption>
+                </figure>
+
+                <div class="surfaces">
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">📱</span>
+                            <div><h4>Customer App</h4><span>Flutter · iOS · Android · Web</span></div>
+                        </div>
+                        <ul>
+                            <li>Sunrise & wind HUD for the West Bank launch zone</li>
+                            <li>Side-by-side package comparison across operators</li>
+                            <li>4-step checkout: seats, hotel pickup, coupons, multi-currency</li>
+                            <li>QR boarding pass and live flight tracking</li>
+                            <li>English & Arabic (RTL)</li>
+                        </ul>
+                    </div>
+                    <div class="surface featured">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">🖥️</span>
+                            <div><h4>Admin & Operator Dashboard</h4><span>Flutter Web · Windows desktop</span></div>
+                        </div>
+                        <ul>
+                            <li>Live operations HUD and analytics</li>
+                            <li>Dispatch board with one-click Go / No-Go per flight</li>
+                            <li>Manifests, check-in and passenger lists</li>
+                            <li>Balloons, pilots, drivers, packages, coupons, reviews</li>
+                            <li>Payments and operator commission reports</li>
+                        </ul>
+                    </div>
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">⚙️</span>
+                            <div><h4>Backend API</h4><span>NestJS · TypeScript · PostgreSQL</span></div>
+                        </div>
+                        <ul>
+                            <li>JWT with role-based access: customer, operator, admin</li>
+                            <li>Database triggers that make overbooking impossible</li>
+                            <li>Commission engine with multi-currency payouts</li>
+                            <li>15+ domain modules, Swagger-documented</li>
+                            <li>Serverless on Vercel + Neon Postgres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="arch" aria-label="Architecture">
+                    <span class="arch-node">Customer App</span>
+                    <span class="arch-node">Admin Dashboard</span>
+                    <span class="arch-edge">REST · JWT</span>
+                    <span class="arch-node core">NestJS API</span>
+                    <span class="arch-edge">TypeORM</span>
+                    <span class="arch-node db">PostgreSQL 16</span>
+                </div>
+
+                <footer class="platform-foot">
+                    <div class="vault-tags"><span>Flutter</span><span>Dart</span><span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>Vercel</span><span>Arabic RTL</span></div>
+                    <div class="platform-links">
+                        <a href="https://nilesky-admin.vercel.app" target="_blank" rel="noopener"
+                            class="btn btn-primary btn-sm">Open Dashboard</a>
+                        <a href="https://github.com/engkemo1/nile_Sky" target="_blank" rel="noopener"
+                            class="btn btn-ghost btn-sm">Source on GitHub</a>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- ── IZGARA ── -->
+            <article class="platform glass-card reveal-up" id="izgara" style="--brand:#d9ad62; --brand-dim:rgba(217,173,98,.14)">
+                <header class="platform-head">
+                    <div class="platform-id">
+                        <div class="platform-logo wordmark" aria-hidden="true">IZ</div>
+                        <div>
+                            <span class="platform-kicker">Restaurant ordering · Weston, Florida (US)</span>
+                            <h3>Izgara</h3>
+                        </div>
+                    </div>
+                    <span class="platform-status">Client project</span>
+                </header>
+                <p class="platform-summary">A branded ordering platform for a Mediterranean restaurant, built to the
+                    standard of top US restaurant apps: pickup and delivery, Stripe payments, live courier tracking,
+                    loyalty, and a realtime kitchen board — across multiple branches.</p>
+
+                <div class="shot-pair">
+                    <figure class="platform-shot">
+                        <img src="img/izgara_app.webp" alt="Izgara customer app: home, order set-up sheet and menu screens"
+                            loading="lazy" width="1600" height="1058">
+                        <figcaption>Customer app</figcaption>
+                    </figure>
+                    <figure class="platform-shot dark">
+                        <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <button type="button" class="shot-zoom" data-zoom="img/izgara_admin_menu.webp" aria-label="Enlarge admin screenshot">
+                            <img src="img/izgara_admin_menu.webp" alt="Izgara admin dashboard: menu editor with live price and availability"
+                                loading="lazy" width="1512" height="807">
+                        </button>
+                        <figcaption>Admin dashboard — menu editor</figcaption>
+                    </figure>
+                </div>
+
+                <div class="surfaces">
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">📱</span>
+                            <div><h4>Customer App</h4><span>Flutter · Riverpod · GoRouter · Freezed</span></div>
+                        </div>
+                        <ul>
+                            <li>Pickup / delivery, ASAP or scheduled in restaurant time</li>
+                            <li>Menu with modifiers, dietary filters and quick add</li>
+                            <li>Stripe sheet: cards, Apple Pay, Google Pay</li>
+                            <li>Realtime order status and live courier map</li>
+                            <li>Rewards, reorder, dark mode, screen-reader support</li>
+                        </ul>
+                    </div>
+                    <div class="surface featured">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">🖥️</span>
+                            <div><h4>Admin Dashboard</h4><span>React · Vite · TypeScript</span></div>
+                        </div>
+                        <ul>
+                            <li>Realtime live-orders board with chime</li>
+                            <li>Menu, modifiers, per-branch menu and "sold out today"</li>
+                            <li>Reports by branch, CSV export, delivery economics</li>
+                            <li>Coupons, loyalty, push campaigns, problem reports</li>
+                            <li>Team roles, audit log, driver page, kitchen tickets</li>
+                        </ul>
+                    </div>
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">⚙️</span>
+                            <div><h4>Backend</h4><span>Supabase · Postgres · Edge Functions (Deno)</span></div>
+                        </div>
+                        <ul>
+                            <li>All pricing server-side, in integer cents</li>
+                            <li>Row Level Security on every table, 6 admin roles</li>
+                            <li>Order, payment & delivery state machines in the DB</li>
+                            <li>Idempotent checkout and deduplicated webhooks</li>
+                            <li>Uber Direct + DoorDash Drive with automatic failover</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="arch" aria-label="Architecture">
+                    <span class="arch-node">Flutter App</span>
+                    <span class="arch-node">React Admin</span>
+                    <span class="arch-edge">Realtime · RLS</span>
+                    <span class="arch-node core">Edge Functions</span>
+                    <span class="arch-edge">Stripe · Couriers · Uber Eats</span>
+                    <span class="arch-node db">Postgres</span>
+                </div>
+
+                <footer class="platform-foot">
+                    <div class="vault-tags"><span>Flutter</span><span>Riverpod</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>Stripe</span><span>FCM</span></div>
+                    <div class="platform-links">
+                        <span class="platform-proof">✓ 7 DB test suites · 32 Deno tests</span>
+                        <a href="https://izgara-admin.vercel.app/dashboard" target="_blank" rel="noopener"
+                            class="btn btn-primary btn-sm">Open Dashboard</a>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- ── CLINIC MANAGER ── -->
+            <article class="platform glass-card reveal-up" id="clinic" style="--brand:#5fd3b8; --brand-dim:rgba(95,211,184,.14)">
+                <header class="platform-head">
+                    <div class="platform-id">
+                        <div class="platform-logo wordmark ar" aria-hidden="true">ع</div>
+                        <div>
+                            <span class="platform-kicker">Healthcare · Arabic-first · Offline</span>
+                            <h3>Clinic Manager <span class="ar-title" lang="ar">إدارة العيادة</span></h3>
+                        </div>
+                    </div>
+                    <span class="platform-status">Desktop · LAN</span>
+                </header>
+                <p class="platform-summary">A management system for an OB/GYN clinic that works with no internet at
+                    all. Reception and the doctor run separate Windows apps that find each other on the clinic's
+                    network automatically and share one encrypted, backed-up database.</p>
+
+                <div class="shot-pair">
+                    <figure class="platform-shot light">
+                        <button type="button" class="shot-zoom" data-zoom="img/clinic_reception.webp" aria-label="Enlarge reception app screenshot">
+                            <img src="img/clinic_reception.webp" alt="Reception app (Arabic): today's counters, patient search and live queue"
+                                loading="lazy" width="1266" height="793">
+                        </button>
+                        <figcaption>Reception app — live counters &amp; today's queue</figcaption>
+                    </figure>
+                    <figure class="platform-shot light">
+                        <button type="button" class="shot-zoom" data-zoom="img/clinic_doctor.webp" aria-label="Enlarge doctor app screenshot">
+                            <img src="img/clinic_doctor.webp" alt="Doctor app (Arabic): patient file with medical alerts, pregnancy dashboard, previous measurements and the current visit form"
+                                loading="lazy" width="1266" height="793">
+                        </button>
+                        <figcaption>Doctor app — patient file, pregnancy dashboard &amp; visit notes</figcaption>
+                    </figure>
+                </div>
+
+                <div class="surfaces">
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">🗂️</span>
+                            <div><h4>Reception App</h4><span>Flutter Windows · Riverpod</span></div>
+                        </div>
+                        <ul>
+                            <li>Hosts the clinic server inside the app</li>
+                            <li>Patient search, booking and live waiting queue</li>
+                            <li>Patient profiles and working-hours schedule</li>
+                            <li>Restore with safety snapshot & auto-rollback</li>
+                            <li>Full Arabic RTL interface</li>
+                        </ul>
+                    </div>
+                    <div class="surface featured">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">🩺</span>
+                            <div><h4>Doctor Dashboard</h4><span>Flutter Windows · GoRouter · Dio</span></div>
+                        </div>
+                        <ul>
+                            <li>Today's queue and patient dashboard</li>
+                            <li>Complete patient file: visits, history, attachments</li>
+                            <li>Pregnancy tracking with gestational age & trimester</li>
+                            <li>Ultrasounds, labs, measurements, follow-ups</li>
+                            <li>Visit drafts so nothing is lost mid-consultation</li>
+                        </ul>
+                    </div>
+                    <div class="surface">
+                        <div class="surface-head"><span class="surface-icon" aria-hidden="true">⚙️</span>
+                            <div><h4>Local Server & Core</h4><span>Dart Shelf · Drift (SQLite)</span></div>
+                        </div>
+                        <ul>
+                            <li>REST API over 16 tables, JWT + bcrypt</li>
+                            <li>UDP broadcast discovery — zero network setup</li>
+                            <li>Encrypted backups to local + external drives</li>
+                            <li>Audit log of every change</li>
+                            <li>Shared models & clinical calculators package</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="arch" aria-label="Architecture">
+                    <span class="arch-node">Doctor App</span>
+                    <span class="arch-edge">UDP discovery · REST</span>
+                    <span class="arch-node core">Reception App + Embedded Server</span>
+                    <span class="arch-edge">Drift</span>
+                    <span class="arch-node db">SQLite + Encrypted Backups</span>
+                </div>
+
+                <footer class="platform-foot">
+                    <div class="vault-tags"><span>Flutter Desktop</span><span>Dart Workspace Monorepo</span><span>Riverpod</span><span>Shelf</span><span>Drift</span><span>Offline-first</span><span>Arabic RTL</span></div>
+                    <p class="platform-proof">4 packages · 1 shared codebase</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--  CHAPTER 06 — THE VAULT (MOBILE)          -->
         <!-- ═══════════════════════════════════════════ -->
         <section id="projects" class="section vault-section">
-            <p class="chapter-label reveal-up">Chapter 05 — The Vault</p>
+            <p class="chapter-label reveal-up">Chapter 06 — The Vault</p>
             <h2 class="section-heading reveal-up">Mobile Showcase</h2>
             <div class="vault-grid">
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="hdcutz_app.png" alt="HD Cutz" class="app-screenshot" loading="lazy">
+                        <img src="img/hdcutz_app.webp" alt="HD Cutz app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">01</div>
                         <h3>HD Cutz</h3>
-                        <p>Real-world salon reservation system. Architected for real-time booking and high-speed data
-                            sync.</p>
+                        <p>Real-world salon reservation system, architected for real-time booking and fast data sync.
+                        </p>
                         <div class="vault-tags"><span>GetX</span><span>Firebase Realtime</span><span>Clean Arch</span>
                         </div>
                         <div class="vault-meta">
@@ -293,16 +624,14 @@
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="trialist_app.png" alt="Trialist" class="app-screenshot" loading="lazy">
+                        <img src="img/trialist_app.webp" alt="Trialist app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">02</div>
                         <h3>Trialist</h3>
-                        <p>Academic research platform. Built with BLoC for complex state management and Firebase
-                            cross-platform sync.</p>
-                        <div class="vault-tags"><span>BLoC</span><span>Firebase
-                                Functions</span><span>Cross-Platform</span></div>
+                        <p>Academic research platform. BLoC for complex state and Firebase for cross-platform sync.</p>
+                        <div class="vault-tags"><span>BLoC</span><span>Firebase Functions</span><span>Cross-Platform</span></div>
                         <div class="vault-meta">
                             <span class="vault-award">✓ Secure Verification</span>
                             <span class="vault-award">✓ Cloud Functions</span>
@@ -312,13 +641,13 @@
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="deivers_app.png" alt="Deivers" class="app-screenshot" loading="lazy">
+                        <img src="img/deivers_app.webp" alt="Deivers app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">03</div>
                         <h3>Deivers</h3>
-                        <p>A performance-first mobile app featuring smooth navigation and deep backend integration.</p>
+                        <p>A performance-first mobile app with smooth navigation and deep backend integration.</p>
                         <div class="vault-tags"><span>Flutter</span><span>Performance</span><span>Backend Sync</span>
                         </div>
                         <div class="vault-meta">
@@ -329,16 +658,14 @@
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="poochiepoo_app.png" alt="Poochiepoo" class="app-screenshot" loading="lazy">
+                        <img src="img/poochiepoo_app.webp" alt="Poochiepoo app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">04</div>
                         <h3>Poochiepoo (Dawgly)</h3>
-                        <p>Premium social platform for pet owners. Industry-standard Clean Architecture with local-first
-                            storage.</p>
-                        <div class="vault-tags"><span>BLoC</span><span>Hive (Local
-                                DB)</span><span>Injectable</span><span>Maps SDK</span></div>
+                        <p>Premium social platform for pet owners. Clean Architecture with local-first storage.</p>
+                        <div class="vault-tags"><span>BLoC</span><span>Hive</span><span>Injectable</span><span>Maps SDK</span></div>
                         <div class="vault-meta">
                             <span class="vault-award">✓ Google Maps API</span>
                             <span class="vault-award">✓ Retrofit API</span>
@@ -348,69 +675,65 @@
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="jaime_app.png" alt="Jaime AI Coach" class="app-screenshot" loading="lazy">
+                        <img src="img/jaime_app.webp" alt="Jaime AI coach app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">05</div>
                         <h3>Jaime</h3>
-                        <p>AI-powered sports coaching app with real-time camera analysis, voice guidance, and
+                        <p>AI-powered sports coaching app with real-time camera analysis, voice guidance and
                             personalized training sessions.</p>
-                        <div class="vault-tags"><span>Clean Architecture</span><span>Feature-First</span><span>AI
-                                Integration</span></div>
+                        <div class="vault-tags"><span>Clean Architecture</span><span>Feature-First</span><span>AI Integration</span></div>
                         <div class="vault-meta">
-                            <span class="vault-award">🟢 On Going</span>
+                            <span class="vault-award">🟢 Ongoing</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="odc_game_app.png" alt="ODC Game" class="app-screenshot" loading="lazy">
+                        <img src="img/odc_game_app.webp" alt="ODC Game screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">06</div>
                         <h3>ODC Game</h3>
-                        <p>Tic-Tac-Toe & Color Puzzle games built in 4 hours during the ODC Hackathon. Performance under
-                            pressure.</p>
+                        <p>Tic-Tac-Toe & Color Puzzle games built in 4 hours during the ODC Hackathon.</p>
                         <div class="vault-tags"><span>Flutter</span><span>Provider</span><span>Game Logic</span></div>
                         <div class="vault-meta">
-                            <span class="vault-award">🏆 ODC Hackathon Ranked 4th</span>
+                            <span class="vault-award">🏆 ODC Hackathon — 4th</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="sales4mazed_app.png" alt="Sales4Mazed" class="app-screenshot" loading="lazy">
+                        <img src="img/sales4mazed_app.webp" alt="Sales4Mazed app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">07</div>
                         <h3>Sales4Mazed</h3>
-                        <p>Bilingual auction & bidding marketplace with real-time bidding, product filtering, and
-                            onboarding flows.</p>
-                        <div class="vault-tags"><span>Flutter</span><span>Bidding System</span><span>Bilingual
-                                (AR/EN)</span></div>
+                        <p>Bilingual auction marketplace with real-time bidding, product filtering and onboarding
+                            flows.</p>
+                        <div class="vault-tags"><span>Flutter</span><span>Bidding System</span><span>Bilingual (AR/EN)</span></div>
                         <div class="vault-meta">
-                            <a href="https://github.com/engkemo1" target="_blank" class="vault-link">Source →</a>
+                            <a href="https://github.com/engkemo1" target="_blank" rel="noopener" class="vault-link">Source →</a>
                         </div>
                     </div>
                 </article>
 
                 <article class="vault-card app-card glass-card reveal-up">
                     <div class="app-display">
-                        <img src="jacobia_app.png" alt="Jacobia" class="app-screenshot" loading="lazy">
+                        <img src="img/jacobia_app.webp" alt="Jacobia app screens" class="app-screenshot" loading="lazy">
                         <div class="app-overlay"></div>
                     </div>
                     <div class="vault-card-inner">
                         <div class="vault-number">08</div>
                         <h3>Jacobia</h3>
-                        <p>Competitive quiz platform with digital wallets, prize leaderboards, and blueCoins currency
-                            system.</p>
-                        <div class="vault-tags"><span>Flutter</span><span>Wallet System</span><span>Arabic RTL</span>
-                        </div>
+                        <p>Competitive quiz platform with digital wallets, prize leaderboards and a blueCoins currency.
+                        </p>
+                        <div class="vault-tags"><span>Flutter</span><span>Wallet System</span><span>Arabic RTL</span></div>
                         <div class="vault-meta">
                             <span class="vault-award">🏆 Competitions</span>
                             <span class="vault-award">💰 Digital Wallet</span>
@@ -422,52 +745,46 @@
         </section>
 
         <!-- ═══════════════════════════════════════════ -->
-        <!--  CHAPTER 06 — WEB PROJECTS                -->
+        <!--  CHAPTER 07 — WEB PROJECTS                -->
         <!-- ═══════════════════════════════════════════ -->
         <section id="websites" class="section websites-section">
-            <p class="chapter-label reveal-up">Chapter 06 — The Web Sites</p>
-            <h2 class="section-heading reveal-up">Web Applications</h2>
+            <p class="chapter-label reveal-up">Chapter 07 — The Web</p>
+            <h2 class="section-heading reveal-up">Web & Desktop Applications</h2>
 
-            <div class="website-showcase reveal-up glass-card"
-                style="margin-bottom: 3rem; border: 1px solid rgba(212,175,55,0.3);">
+            <div class="website-showcase website-gold reveal-up glass-card">
                 <div class="website-content">
-                    <h3 style="color: #d4af37; font-size: 2rem;">KMK Luxury Hotel PMS</h3>
-                    <p class="website-desc">A massive, enterprise-grade Property Management System (PMS) designed for
-                        luxury hotels. It functions as a complete ecosystem bridging Desktop and Mobile experiences
-                        seamlessly.</p>
-                    <ul
-                        style="color: #888; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li><strong>Admin Desktop App:</strong> Powerful centralized dashboard for reservations, live
-                            room status, and HR management.</li>
-                        <li><strong>Mobile Staff Portal:</strong> Role-based PIN access for housekeeping to mark rooms
-                            clean and request leaves.</li>
-                        <li><strong>Mobile Guest App:</strong> QR-code based web-app allowing guests to order room
-                            service and track their stay.</li>
+                    <h3>KMK Luxury Hotel PMS</h3>
+                    <p class="website-desc">An enterprise-grade Property Management System for luxury hotels — one
+                        ecosystem spanning a desktop admin, a staff portal and a guest web-app.</p>
+                    <ul class="website-points">
+                        <li><strong>Admin Desktop App:</strong> reservations, live room status and HR management.</li>
+                        <li><strong>Staff Portal:</strong> role-based PIN access for housekeeping and leave requests.
+                        </li>
+                        <li><strong>Guest App:</strong> QR-code web-app for room service and stay tracking.</li>
                     </ul>
                     <div class="vault-tags">
                         <span>React</span><span>Vite</span><span>Firebase</span><span>Electron.js</span><span>Enterprise</span>
                     </div>
-                    <div class="vault-meta" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 10px;">
-                        <a href="downloads/KMK_Luxury_Hotel_Admin.exe" download class="btn btn-primary"
-                            style="background: #d4af37; color: #000;">Download Desktop App (.exe)</a>
-                        <a href="https://employye-a0a66.web.app/#/" target="_blank" class="btn btn-ghost">Admin
-                            Dashboard</a>
-                        <a href="https://employye-a0a66.web.app/#/staff-portal" target="_blank"
-                            class="btn btn-ghost">Staff Portal</a>
-                        <a href="https://employye-a0a66.web.app/#/guest/101" target="_blank" class="btn btn-ghost">Guest
-                            App</a>
-                        <a href="https://github.com/engkemo1/kmk-hotel-pms" target="_blank" class="vault-link"
-                            style="width: 100%; margin-top: 10px;">View GitHub Source →</a>
+                    <div class="website-links">
+                        <a href="downloads/KMK_Luxury_Hotel_Admin.exe" download class="btn btn-gold btn-sm">Download
+                            Desktop App (.exe · 116 MB)</a>
+                        <a href="https://employye-a0a66.web.app/#/" target="_blank" rel="noopener"
+                            class="btn btn-ghost btn-sm">Admin Dashboard</a>
+                        <a href="https://employye-a0a66.web.app/#/staff-portal" target="_blank" rel="noopener"
+                            class="btn btn-ghost btn-sm">Staff Portal</a>
+                        <a href="https://employye-a0a66.web.app/#/guest/101" target="_blank" rel="noopener"
+                            class="btn btn-ghost btn-sm">Guest App</a>
+                        <a href="https://github.com/engkemo1/kmk-hotel-pms" target="_blank" rel="noopener"
+                            class="vault-link">View GitHub Source →</a>
                     </div>
                 </div>
                 <div class="website-visual">
-                    <div class="browser-mockup" style="border: 1px solid rgba(212,175,55,0.2);">
+                    <div class="browser-mockup">
                         <div class="browser-top">
                             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                         </div>
                         <div class="browser-content">
-                            <img src="kmk_pms.png" alt="KMK Hotel PMS Ecosystem"
-                                style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="img/kmk_pms.webp" alt="KMK Hotel PMS ecosystem" class="browser-img" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -476,14 +793,13 @@
             <div class="website-showcase reveal-up glass-card">
                 <div class="website-content">
                     <h3>Harissa Awlad Fathallah</h3>
-                    <p class="website-desc">A luxury e-commerce web application built using Flutter Web. It features a
-                        modern dark-themed glassmorphism UI, scroll-driven product displays, and a highly responsive
-                        layout optimized for all screen sizes.</p>
+                    <p class="website-desc">A luxury e-commerce web app built with Flutter Web: dark glassmorphism UI,
+                        scroll-driven product displays and a layout tuned for every screen size.</p>
                     <div class="vault-tags">
                         <span>Flutter Web</span><span>High-Performance UI</span><span>Responsive</span>
                     </div>
-                    <div class="vault-meta" style="margin-top: 2rem;">
-                        <a href="https://harissa-awlad-fathallah.web.app/" class="btn btn-primary" target="_blank"
+                    <div class="website-links">
+                        <a href="https://harissa-awlad-fathallah.web.app/" class="btn btn-primary btn-sm" target="_blank"
                             rel="noopener">Visit Live Site</a>
                     </div>
                 </div>
@@ -493,42 +809,50 @@
                             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                         </div>
                         <div class="browser-content">
-                            <img src="harissa.png" alt="Harissa Web App" class="harissa-screenshot" loading="lazy">
+                            <img src="img/harissa.webp" alt="Harissa web app" class="browser-img" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Additional Web Projects -->
-            <div class="vault-grid" style="margin-top: 3rem;">
-                <article class="vault-card glass-card reveal-up">
+            <div class="vault-grid web-mini-grid">
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display web-display">
+                        <img src="img/trialist_web.webp" alt="Trialist: research-trial platform screens" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
                     <div class="vault-card-inner">
                         <h3>Trialist Web App</h3>
-                        <p>Academic research portal. Built with Flutter Web, featuring high-fidelity data visualizations
-                            and real-time community interaction.</p>
-                        <div class="vault-tags"><span>Flutter Web</span><span>Firebase Web</span><span>Responsive</span>
-                        </div>
+                        <p>Academic research portal in Flutter Web with data visualizations and real-time community
+                            interaction.</p>
+                        <div class="vault-tags"><span>Flutter Web</span><span>Firebase Web</span><span>Responsive</span></div>
                     </div>
                 </article>
 
-                <article class="vault-card glass-card reveal-up">
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display web-display">
+                        <img src="img/dawgly_web.webp" alt="Dawgly web: business dashboard with revenue analytics" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
                     <div class="vault-card-inner">
                         <h3>Dawgly Web App</h3>
-                        <p>Enterprise administration dashboard for social platform management. Uses Retrofit and Hive
-                            for scalable data handling.</p>
-                        <div class="vault-tags"><span>Flutter Web</span><span>Admin Dashboard</span><span>REST
-                                API</span></div>
+                        <p>Web app for dog owners and pet-care businesses: booking, appointments, services, reviews and
+                            a business revenue dashboard.</p>
+                        <div class="vault-tags"><span>Flutter Web</span><span>BLoC / Cubit</span><span>Injectable</span><span>Retrofit</span></div>
                     </div>
                 </article>
 
-                <article class="vault-card glass-card reveal-up">
+                <article class="vault-card app-card glass-card reveal-up">
+                    <div class="app-display web-display">
+                        <img src="img/petology_web.webp" alt="Petology website: login page" class="app-screenshot" loading="lazy">
+                        <div class="app-overlay"></div>
+                    </div>
                     <div class="vault-card-inner">
                         <h3>Petology</h3>
-                        <p>A beautifully designed pet adoption platform. Highlights modern UI/UX principles and smooth
-                            web transitions.</p>
+                        <p>A pet adoption platform focused on modern UI/UX and smooth web transitions.</p>
                         <div class="vault-tags"><span>Web UI/UX</span><span>Modern Design</span></div>
                         <div class="vault-meta">
-                            <a href="https://github.com/engkemo1/Petology_website" target="_blank"
+                            <a href="https://github.com/engkemo1/Petology_website" target="_blank" rel="noopener"
                                 class="vault-link">View Repository →</a>
                         </div>
                     </div>
@@ -537,45 +861,145 @@
         </section>
 
         <!-- ═══════════════════════════════════════════ -->
-        <!--  CHAPTER 07 — THE SPECTRUM                -->
+        <!--  CHAPTER 08 — THE SPECTRUM                -->
         <!-- ═══════════════════════════════════════════ -->
         <section id="skills" class="section skills-section">
-            <p class="chapter-label reveal-up">Chapter 07 — The Spectrum</p>
+            <p class="chapter-label reveal-up">Chapter 08 — The Spectrum</p>
             <h2 class="section-heading reveal-up">Technical Arsenal</h2>
+
             <div class="skills-grid">
                 <div class="skill-group glass-card reveal-up">
-                    <h3>Languages & Core</h3>
+                    <div class="skill-head"><span class="skill-index">01</span>
+                        <h3>Languages & Core</h3>
+                    </div>
+                    <p class="skill-desc">Dart is home; TypeScript for backends and dashboards.</p>
                     <div class="skill-items">
                         <div class="skill-pill featured">Dart</div>
                         <div class="skill-pill featured">Flutter</div>
+                        <div class="skill-pill">TypeScript</div>
+                        <div class="skill-pill">JavaScript</div>
+                        <div class="skill-pill">SQL</div>
                         <div class="skill-pill">Node.js</div>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card reveal-up">
+                    <div class="skill-head"><span class="skill-index">02</span>
+                        <h3>State Management</h3>
+                    </div>
+                    <p class="skill-desc">Picked per project — predictable, testable, immutable.</p>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">BLoC / Cubit</div>
+                        <div class="skill-pill featured">Riverpod</div>
+                        <div class="skill-pill">Provider</div>
+                        <div class="skill-pill">GetX</div>
+                        <div class="skill-pill">Freezed (immutable state)</div>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card reveal-up">
+                    <div class="skill-head"><span class="skill-index">03</span>
+                        <h3>Architecture & Engineering</h3>
+                    </div>
+                    <p class="skill-desc">Structure that survives year two.</p>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">Clean Architecture</div>
+                        <div class="skill-pill">Feature-first modules</div>
+                        <div class="skill-pill">SOLID</div>
+                        <div class="skill-pill">Repository pattern</div>
+                        <div class="skill-pill">DI (get_it / Injectable)</div>
+                        <div class="skill-pill">Dart workspace monorepos</div>
+                        <div class="skill-pill">State machines</div>
+                        <div class="skill-pill">Offline-first</div>
+                        <div class="skill-pill">Unit · Widget · Integration tests</div>
+                    </div>
+                </div>
+
+                <div class="skill-group glass-card reveal-up">
+                    <div class="skill-head"><span class="skill-index">04</span>
+                        <h3>Backend & Data</h3>
+                    </div>
+                    <p class="skill-desc">I build the API too, not just consume it.</p>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">Supabase</div>
+                        <div class="skill-pill featured">NestJS</div>
+                        <div class="skill-pill">Firebase</div>
+                        <div class="skill-pill">PostgreSQL · RLS</div>
+                        <div class="skill-pill">Edge Functions (Deno)</div>
+                        <div class="skill-pill">Dart Shelf</div>
+                        <div class="skill-pill">Drift / SQLite</div>
+                        <div class="skill-pill">Hive</div>
                         <div class="skill-pill">MongoDB</div>
                     </div>
                 </div>
+
                 <div class="skill-group glass-card reveal-up">
-                    <h3>State Management</h3>
+                    <div class="skill-head"><span class="skill-index">05</span>
+                        <h3>Networking & Integrations</h3>
+                    </div>
+                    <p class="skill-desc">Payments, maps, couriers and realtime.</p>
                     <div class="skill-items">
-                        <div class="skill-pill featured">BLoC</div>
-                        <div class="skill-pill">Provider</div>
-                        <div class="skill-pill">Riverpod</div>
+                        <div class="skill-pill featured">REST · WebSockets · Realtime</div>
+                        <div class="skill-pill">Dio / Retrofit</div>
+                        <div class="skill-pill">GoRouter</div>
+                        <div class="skill-pill">Stripe</div>
+                        <div class="skill-pill">Google Maps</div>
+                        <div class="skill-pill">FCM push</div>
+                        <div class="skill-pill">Uber Direct · DoorDash Drive</div>
                     </div>
                 </div>
+
                 <div class="skill-group glass-card reveal-up">
-                    <h3>Engineering</h3>
-                    <div class="skill-items">
-                        <div class="skill-pill featured">Clean Architecture</div>
-                        <div class="skill-pill">SOLID</div>
-                        <div class="skill-pill">TDD</div>
+                    <div class="skill-head"><span class="skill-index">06</span>
+                        <h3>Web, Desktop & Delivery</h3>
                     </div>
+                    <p class="skill-desc">One codebase, every screen — then shipped.</p>
+                    <div class="skill-items">
+                        <div class="skill-pill featured">Flutter Web & Desktop</div>
+                        <div class="skill-pill">React + Vite</div>
+                        <div class="skill-pill">Electron</div>
+                        <div class="skill-pill">Arabic RTL & i18n</div>
+                        <div class="skill-pill">Vercel</div>
+                        <div class="skill-pill">Firebase Hosting</div>
+                        <div class="skill-pill">Git & GitHub</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="sub-heading reveal-up">How I engineer</h3>
+            <div class="principles">
+                <div class="principle glass-card reveal-up">
+                    <span class="principle-num">01</span>
+                    <h4>The server is the authority</h4>
+                    <p>Prices, permissions and order states are decided on the backend. The app never gets to say
+                        what something costs or that a payment succeeded.</p>
+                </div>
+                <div class="principle glass-card reveal-up">
+                    <span class="principle-num">02</span>
+                    <h4>Offline when it matters</h4>
+                    <p>A clinic can't stop because the internet did. Local servers, LAN discovery and encrypted backups
+                        are design choices, not afterthoughts.</p>
+                </div>
+                <div class="principle glass-card reveal-up">
+                    <span class="principle-num">03</span>
+                    <h4>One codebase, many surfaces</h4>
+                    <p>Shared models and packages across mobile, web and desktop, so a rule changes once and every
+                        screen follows.</p>
+                </div>
+                <div class="principle glass-card reveal-up">
+                    <span class="principle-num">04</span>
+                    <h4>Tested where it breaks</h4>
+                    <p>Tests go where the money and the data are: pricing, state transitions, permissions and
+                        webhooks.</p>
                 </div>
             </div>
         </section>
 
         <!-- ═══════════════════════════════════════════ -->
-        <!--  CHAPTER 08 — THE CONNECTION              -->
+        <!--  CHAPTER 09 — THE CONNECTION              -->
         <!-- ═══════════════════════════════════════════ -->
         <section id="contact" class="section contact-section">
-            <p class="chapter-label reveal-up">Chapter 08 — The Connection</p>
+            <p class="chapter-label reveal-up">Chapter 09 — The Connection</p>
             <h2 class="contact-heading reveal-up">Ready to build<br><span class="accent">with excellence.</span></h2>
             <div class="contact-grid">
                 <div class="contact-info-card glass-card reveal-up">
@@ -586,19 +1010,20 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-label">WhatsApp</span>
-                            <a href="https://wa.me/201206430818" class="contact-value">+20 120 643 0818</a>
+                            <a href="https://wa.me/201206430818" target="_blank" rel="noopener"
+                                class="contact-value">+20 120 643 0818</a>
                         </div>
                     </div>
                 </div>
                 <div class="social-card glass-card reveal-up">
                     <h3>Find me online</h3>
                     <div class="social-links">
-                        <a href="https://github.com/engkemo1" target="_blank" class="social-btn">GitHub</a>
-                        <a href="https://www.linkedin.com/in/kamal-magdy-22593b213/" target="_blank"
+                        <a href="https://github.com/engkemo1" target="_blank" rel="noopener" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kamal-magdy-22593b213/" target="_blank" rel="noopener"
                             class="social-btn">LinkedIn</a>
-                        <a href="https://www.facebook.com/kamal.magdy.790" target="_blank"
+                        <a href="https://www.facebook.com/kamal.magdy.790" target="_blank" rel="noopener"
                             class="social-btn">Facebook</a>
-                        <a href="https://www.instagram.com/eng.kamal_magdy/" target="_blank"
+                        <a href="https://www.instagram.com/eng.kamal_magdy/" target="_blank" rel="noopener"
                             class="social-btn">Instagram</a>
                     </div>
                 </div>
@@ -607,13 +1032,13 @@
     </main>
 
     <!-- Image Modal -->
-    <div id="image-modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
+    <div id="image-modal" class="modal" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button type="button" class="close" aria-label="Close preview">&times;</button>
+        <img class="modal-content" id="modal-img" alt="">
     </div>
 
     <footer class="footer">
-        <p>Managed with Excellence — Kamal Magdy — <span id="year"></span></p>
+        <p>Designed & built by Kamal Magdy — <span id="year"></span></p>
     </footer>
 
     <script src="index.js"></script>
