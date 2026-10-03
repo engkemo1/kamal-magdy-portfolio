@@ -1508,6 +1508,23 @@ a.contact-value:hover {
 .shot-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
 .platform-links .platform-proof { align-self: center; margin-right: 0.4rem; }
 @media (max-width: 1024px) { .shot-pair { grid-template-columns: 1fr; } }
+
+/* ── Reviews ── */
+.reviews-summary { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding: 1.5rem 2rem; margin-bottom: 1.5rem; }
+.reviews-summary p { flex: 1; min-width: 220px; color: var(--text-secondary); }
+.reviews-summary strong { color: var(--text-primary); }
+.rs-score { display: flex; align-items: center; gap: 0.8rem; }
+.rs-score b { font-family: var(--font-display); font-size: 2.6rem; font-weight: 900; line-height: 1; }
+.review-stars { color: #f5b301; letter-spacing: 2px; font-size: 1rem; }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 1.2rem; }
+.review { display: flex; flex-direction: column; gap: 1rem; padding: 1.6rem; color: inherit; }
+.review blockquote { flex: 1; font-size: 1.02rem; line-height: 1.7; color: var(--text-primary); }
+.review-orig { font-family: 'Cairo', var(--font-body); font-size: 0.82rem; line-height: 1.7; color: var(--text-muted); text-align: right; }
+.review blockquote::before { content: '“'; display: block; font-family: Georgia, serif; font-size: 2.6rem; line-height: 0.6; color: var(--accent); opacity: 0.6; margin-bottom: 0.4rem; }
+.review-foot { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; padding-top: 0.9rem; border-top: 1px solid var(--glass-border); font-size: 0.85rem; }
+.review-name { font-weight: 600; }
+.review-src { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); }
+.review:hover .review-src { color: var(--accent); }
 /* ── Web section tidy-ups ── */
 .website-gold { margin-bottom: 3rem; border-color: rgba(212, 175, 55, 0.3); }
 .website-gold h3 { color: #d4af37; }
